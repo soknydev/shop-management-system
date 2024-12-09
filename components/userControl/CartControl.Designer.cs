@@ -41,8 +41,8 @@
             // 
             // btnPayNow
             // 
-            btnPayNow.BackColor = Color.FromArgb(255, 101, 0);
-            btnPayNow.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnPayNow.BackColor = Color.FromArgb(64, 123, 255);
+            btnPayNow.BackgroundColor = Color.FromArgb(64, 123, 255);
             btnPayNow.BorderColor = Color.PaleVioletRed;
             btnPayNow.BorderRadius = 10;
             btnPayNow.BorderSize = 0;
@@ -87,7 +87,7 @@
             lblProductName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblProductName.AutoSize = true;
             lblProductName.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
-            lblProductName.ForeColor = Color.FromArgb(255, 101, 0);
+            lblProductName.ForeColor = Color.FromArgb(64, 123, 255);
             lblProductName.Location = new Point(54, 15);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(86, 37);

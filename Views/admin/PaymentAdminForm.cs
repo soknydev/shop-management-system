@@ -14,15 +14,15 @@ namespace shop_management_system.Views.admin
 
             _invoiceController = new InvoiceController();
             int employeeId = UserSession.CurrentUser.EmployeeId; // Example
-            LoadInvoices(employeeId);
+            LoadInvoices();
 
             UserInfo();
         }
 
-        private void LoadInvoices(int employeeId)
+        private void LoadInvoices()
         {
             flpInvoices.Controls.Clear();
-            var invoices = _invoiceController.GetInvoicesByEmployeeId(employeeId);
+            var invoices = _invoiceController.GetAllInvoices();
 
             foreach (var invoice in invoices)
             {
@@ -31,6 +31,19 @@ namespace shop_management_system.Views.admin
                 flpInvoices.Controls.Add(invoiceControl);
             }
         }
+
+        /* private void LoadInvoices(int employeeId)
+         {
+             flpInvoices.Controls.Clear();
+             var invoices = _invoiceController.GetInvoicesByEmployeeId(employeeId);
+
+             foreach (var invoice in invoices)
+             {
+                 var invoiceControl = new InvoiceControl();
+                 invoiceControl.SetInvoice(invoice);
+                 flpInvoices.Controls.Add(invoiceControl);
+             }
+         }*/
 
         private void UserInfo()
         {

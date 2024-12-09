@@ -12,6 +12,11 @@ namespace shop_management_system.Controllers
             _invoiceService = new InvoiceService();
         }
 
+        public List<Invoice> GetAllInvoices()
+        {
+            return _invoiceService.GetAllInvoices();
+        }
+
         public List<Invoice> GetInvoicesByEmployeeId(int employeeId)
         {
             return _invoiceService.GetInvoicesByEmployeeId(employeeId);

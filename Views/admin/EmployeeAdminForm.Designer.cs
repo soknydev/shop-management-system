@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeAdminForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
@@ -52,9 +53,9 @@
             pbProfile = new components.PictureBoxComponent1();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel2 = new Panel();
-            btnEmployees = new components.ButtonSidebar();
-            btnCategories = new components.ButtonSidebar1();
-            btnProdcuts = new components.ButtonSidebar1();
+            btnPayments = new components.ButtonSidebar1();
+            btnUsers = new components.ButtonSidebar();
+            btnProducts = new components.ButtonSidebar1();
             pbLogo = new PictureBox();
             panel1 = new Panel();
             panel3 = new Panel();
@@ -224,9 +225,9 @@
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(42, 19);
             label1.Name = "label1";
-            label1.Size = new Size(155, 28);
+            label1.Size = new Size(105, 28);
             label1.TabIndex = 0;
-            label1.Text = "Employee Name";
+            label1.Text = "Full  Name";
             // 
             // panel11
             // 
@@ -239,8 +240,8 @@
             // 
             // btnAddEmployee
             // 
-            btnAddEmployee.BackColor = Color.FromArgb(255, 101, 0);
-            btnAddEmployee.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnAddEmployee.BackColor = Color.FromArgb(64, 123, 255);
+            btnAddEmployee.BackgroundColor = Color.FromArgb(64, 123, 255);
             btnAddEmployee.BorderColor = Color.PaleVioletRed;
             btnAddEmployee.BorderRadius = 10;
             btnAddEmployee.BorderSize = 0;
@@ -288,7 +289,7 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Segoe UI", 14F);
-            lblWelcome.ForeColor = Color.FromArgb(255, 101, 0);
+            lblWelcome.ForeColor = Color.FromArgb(64, 123, 255);
             lblWelcome.Location = new Point(24, 19);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(78, 32);
@@ -358,9 +359,9 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(btnEmployees);
-            panel2.Controls.Add(btnCategories);
-            panel2.Controls.Add(btnProdcuts);
+            panel2.Controls.Add(btnPayments);
+            panel2.Controls.Add(btnUsers);
+            panel2.Controls.Add(btnProducts);
             panel2.Controls.Add(pbLogo);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
@@ -369,79 +370,77 @@
             panel2.Size = new Size(214, 617);
             panel2.TabIndex = 2;
             // 
-            // btnEmployees
+            // btnPayments
             // 
-            btnEmployees.BackColor = Color.FromArgb(255, 101, 0);
-            btnEmployees.BackgroundColor = Color.FromArgb(255, 101, 0);
-            btnEmployees.BorderColor = Color.PaleVioletRed;
-            btnEmployees.BorderRadius = 10;
-            btnEmployees.BorderSize = 0;
-            btnEmployees.FlatAppearance.BorderSize = 0;
-            btnEmployees.FlatStyle = FlatStyle.Flat;
-            btnEmployees.Font = new Font("Segoe UI Semibold", 12F);
-            btnEmployees.ForeColor = Color.White;
-            btnEmployees.Location = new Point(9, 248);
-            btnEmployees.Name = "btnEmployees";
-            btnEmployees.Padding = new Padding(15, 5, 30, 5);
-            btnEmployees.Size = new Size(189, 50);
-            btnEmployees.TabIndex = 4;
-            btnEmployees.Text = "Employees";
-            btnEmployees.TextAlign = ContentAlignment.MiddleLeft;
-            btnEmployees.TextColor = Color.White;
-            btnEmployees.UseVisualStyleBackColor = false;
+            btnPayments.BackColor = SystemColors.Control;
+            btnPayments.BackgroundColor = SystemColors.Control;
+            btnPayments.BorderColor = Color.PaleVioletRed;
+            btnPayments.BorderRadius = 10;
+            btnPayments.BorderSize = 0;
+            btnPayments.FlatAppearance.BorderSize = 0;
+            btnPayments.FlatStyle = FlatStyle.Flat;
+            btnPayments.Font = new Font("Segoe UI Semibold", 12F);
+            btnPayments.ForeColor = Color.Black;
+            btnPayments.Location = new Point(9, 194);
+            btnPayments.Name = "btnPayments";
+            btnPayments.Padding = new Padding(15, 5, 30, 5);
+            btnPayments.Size = new Size(188, 50);
+            btnPayments.TabIndex = 13;
+            btnPayments.Text = "Payments";
+            btnPayments.TextAlign = ContentAlignment.MiddleLeft;
+            btnPayments.TextColor = Color.Black;
+            btnPayments.UseVisualStyleBackColor = false;
             // 
-            // btnCategories
+            // btnUsers
             // 
-            btnCategories.BackColor = SystemColors.Control;
-            btnCategories.BackgroundColor = SystemColors.Control;
-            btnCategories.BorderColor = Color.PaleVioletRed;
-            btnCategories.BorderRadius = 10;
-            btnCategories.BorderSize = 0;
-            btnCategories.FlatAppearance.BorderSize = 0;
-            btnCategories.FlatStyle = FlatStyle.Flat;
-            btnCategories.Font = new Font("Segoe UI Semibold", 12F);
-            btnCategories.ForeColor = Color.Black;
-            btnCategories.Location = new Point(9, 192);
-            btnCategories.Name = "btnCategories";
-            btnCategories.Padding = new Padding(15, 5, 30, 5);
-            btnCategories.Size = new Size(188, 50);
-            btnCategories.TabIndex = 7;
-            btnCategories.Text = "Cagetories";
-            btnCategories.TextAlign = ContentAlignment.MiddleLeft;
-            btnCategories.TextColor = Color.Black;
-            btnCategories.UseVisualStyleBackColor = false;
-            btnCategories.Click += btnCaetegory_Click;
+            btnUsers.BackColor = Color.FromArgb(64, 123, 255);
+            btnUsers.BackgroundColor = Color.FromArgb(64, 123, 255);
+            btnUsers.BorderColor = Color.PaleVioletRed;
+            btnUsers.BorderRadius = 10;
+            btnUsers.BorderSize = 0;
+            btnUsers.FlatAppearance.BorderSize = 0;
+            btnUsers.FlatStyle = FlatStyle.Flat;
+            btnUsers.Font = new Font("Segoe UI Semibold", 12F);
+            btnUsers.ForeColor = Color.White;
+            btnUsers.Location = new Point(8, 250);
+            btnUsers.Name = "btnUsers";
+            btnUsers.Padding = new Padding(15, 5, 30, 5);
+            btnUsers.Size = new Size(189, 50);
+            btnUsers.TabIndex = 11;
+            btnUsers.Text = "Users";
+            btnUsers.TextAlign = ContentAlignment.MiddleLeft;
+            btnUsers.TextColor = Color.White;
+            btnUsers.UseVisualStyleBackColor = false;
             // 
-            // btnProdcuts
+            // btnProducts
             // 
-            btnProdcuts.BackColor = SystemColors.Control;
-            btnProdcuts.BackgroundColor = SystemColors.Control;
-            btnProdcuts.BorderColor = Color.PaleVioletRed;
-            btnProdcuts.BorderRadius = 10;
-            btnProdcuts.BorderSize = 0;
-            btnProdcuts.FlatAppearance.BorderSize = 0;
-            btnProdcuts.FlatStyle = FlatStyle.Flat;
-            btnProdcuts.Font = new Font("Segoe UI Semibold", 12F);
-            btnProdcuts.ForeColor = Color.Black;
-            btnProdcuts.Location = new Point(9, 136);
-            btnProdcuts.Name = "btnProdcuts";
-            btnProdcuts.Padding = new Padding(15, 5, 30, 5);
-            btnProdcuts.Size = new Size(188, 50);
-            btnProdcuts.TabIndex = 5;
-            btnProdcuts.Text = "Products";
-            btnProdcuts.TextAlign = ContentAlignment.MiddleLeft;
-            btnProdcuts.TextColor = Color.Black;
-            btnProdcuts.UseVisualStyleBackColor = false;
-            btnProdcuts.Click += btnProducts_Click;
+            btnProducts.BackColor = SystemColors.Control;
+            btnProducts.BackgroundColor = SystemColors.Control;
+            btnProducts.BorderColor = Color.PaleVioletRed;
+            btnProducts.BorderRadius = 10;
+            btnProducts.BorderSize = 0;
+            btnProducts.FlatAppearance.BorderSize = 0;
+            btnProducts.FlatStyle = FlatStyle.Flat;
+            btnProducts.Font = new Font("Segoe UI Semibold", 12F);
+            btnProducts.ForeColor = Color.Black;
+            btnProducts.Location = new Point(11, 138);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Padding = new Padding(15, 5, 30, 5);
+            btnProducts.Size = new Size(188, 50);
+            btnProducts.TabIndex = 12;
+            btnProducts.Text = "Products";
+            btnProducts.TextAlign = ContentAlignment.MiddleLeft;
+            btnProducts.TextColor = Color.Black;
+            btnProducts.UseVisualStyleBackColor = false;
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.bms;
-            pbLogo.Location = new Point(19, 4);
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
+            pbLogo.Location = new Point(20, 6);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(109, 109);
             pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbLogo.TabIndex = 0;
+            pbLogo.TabIndex = 10;
             pbLogo.TabStop = false;
             // 
             // panel1
@@ -490,7 +489,7 @@
             ClientSize = new Size(1884, 763);
             Controls.Add(tableLayoutPanel1);
             Name = "EmployeeAdminForm";
-            Text = "EmployeeAdminForm";
+            Text = "User";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
@@ -527,10 +526,6 @@
         private components.PictureBoxComponent1 pbProfile;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel2;
-        private components.ButtonSidebar btnEmployees;
-        private components.ButtonSidebar1 btnCategories;
-        private components.ButtonSidebar1 btnProdcuts;
-        private PictureBox pbLogo;
         private Panel panel1;
         private Panel panel3;
         private components.LogoutButton logoutButton1;
@@ -546,5 +541,9 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private components.ButtonSidebar1 btnPayments;
+        private components.ButtonSidebar btnUsers;
+        private components.ButtonSidebar1 btnProducts;
+        private PictureBox pbLogo;
     }
 }

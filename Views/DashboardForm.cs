@@ -131,8 +131,8 @@ namespace shop_management_system.Views
 
         private void btnCategories_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
-            categoryForm.Show();
+            CartForm cart = new CartForm(UserSession.CurrentUser.EmployeeId);
+            cart.Show();
             this.Hide();
         }
 
@@ -143,5 +143,18 @@ namespace shop_management_system.Views
             this.Hide();
         }
 
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            MyPaymentForm paymentForm = new MyPaymentForm();
+            paymentForm.Show();
+            this.Hide();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            CartForm cartForm = new CartForm(UserSession.CurrentUser.EmployeeId);
+            cartForm.Show();
+            this.Hide();
+        }
     }
 }

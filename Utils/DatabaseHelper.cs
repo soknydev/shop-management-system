@@ -5,7 +5,7 @@ namespace shop_management_system.Utils
     public static class DatabaseHelper
     {
         private static string server = "localhost";         // Server IP or domain
-        private static string database = "bakery_ms_db";    // Database name
+        private static string database = "sms";    // Database name
         private static string userId = "sokny";             // Username
         private static string password = "1234Dev&&";       // Password
         private static int port = 3306;                     // MySQL port

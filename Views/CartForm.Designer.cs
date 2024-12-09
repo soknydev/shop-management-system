@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
-            btnMyOrders = new components.ButtonSidebar1();
-            btnProducts = new components.ButtonSidebar();
-            btnMyPayments = new components.ButtonSidebar1();
-            btnCategories = new components.ButtonSidebar1();
+            btnPay = new components.ButtonSidebar1();
+            btnProducts = new components.ButtonSidebar1();
+            btnCarts = new components.ButtonSidebar();
             pbLogo = new PictureBox();
             panel5 = new Panel();
             logoutButton1 = new components.LogoutButton();
@@ -52,7 +52,6 @@
             panel6 = new Panel();
             btnBuyAll = new components.ButtonComponent1();
             label1 = new Label();
-            btnCustomers = new components.ButtonSidebar1();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -102,113 +101,90 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnCustomers);
-            panel1.Controls.Add(btnMyOrders);
+            panel1.Controls.Add(btnPay);
             panel1.Controls.Add(btnProducts);
-            panel1.Controls.Add(btnMyPayments);
-            panel1.Controls.Add(btnCategories);
+            panel1.Controls.Add(btnCarts);
             panel1.Controls.Add(pbLogo);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(208, 630);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
-            // btnMyOrders
+            // btnPay
             // 
-            btnMyOrders.BackColor = SystemColors.Control;
-            btnMyOrders.BackgroundColor = SystemColors.Control;
-            btnMyOrders.BorderColor = Color.PaleVioletRed;
-            btnMyOrders.BorderRadius = 10;
-            btnMyOrders.BorderSize = 0;
-            btnMyOrders.FlatAppearance.BorderSize = 0;
-            btnMyOrders.FlatStyle = FlatStyle.Flat;
-            btnMyOrders.Font = new Font("Segoe UI Semibold", 12F);
-            btnMyOrders.ForeColor = Color.Black;
-            btnMyOrders.Location = new Point(8, 138);
-            btnMyOrders.Name = "btnMyOrders";
-            btnMyOrders.Padding = new Padding(15, 5, 30, 5);
-            btnMyOrders.Size = new Size(188, 50);
-            btnMyOrders.TabIndex = 14;
-            btnMyOrders.Text = "Products";
-            btnMyOrders.TextAlign = ContentAlignment.MiddleLeft;
-            btnMyOrders.TextColor = Color.Black;
-            btnMyOrders.UseVisualStyleBackColor = false;
-            btnMyOrders.Click += ProductsBtn_Click;
+            btnPay.BackColor = SystemColors.Control;
+            btnPay.BackgroundColor = SystemColors.Control;
+            btnPay.BorderColor = Color.PaleVioletRed;
+            btnPay.BorderRadius = 10;
+            btnPay.BorderSize = 0;
+            btnPay.FlatAppearance.BorderSize = 0;
+            btnPay.FlatStyle = FlatStyle.Flat;
+            btnPay.Font = new Font("Segoe UI Semibold", 12F);
+            btnPay.ForeColor = Color.Black;
+            btnPay.Location = new Point(11, 247);
+            btnPay.Name = "btnPay";
+            btnPay.Padding = new Padding(15, 5, 30, 5);
+            btnPay.Size = new Size(188, 50);
+            btnPay.TabIndex = 11;
+            btnPay.Text = "Payments";
+            btnPay.TextAlign = ContentAlignment.MiddleLeft;
+            btnPay.TextColor = Color.Black;
+            btnPay.UseVisualStyleBackColor = false;
+            btnPay.Click += btnPay_Click;
             // 
             // btnProducts
             // 
-            btnProducts.BackColor = Color.FromArgb(255, 101, 0);
-            btnProducts.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnProducts.BackColor = SystemColors.Control;
+            btnProducts.BackgroundColor = SystemColors.Control;
             btnProducts.BorderColor = Color.PaleVioletRed;
             btnProducts.BorderRadius = 10;
             btnProducts.BorderSize = 0;
             btnProducts.FlatAppearance.BorderSize = 0;
             btnProducts.FlatStyle = FlatStyle.Flat;
             btnProducts.Font = new Font("Segoe UI Semibold", 12F);
-            btnProducts.ForeColor = Color.White;
-            btnProducts.Location = new Point(7, 250);
+            btnProducts.ForeColor = Color.Black;
+            btnProducts.Location = new Point(12, 135);
             btnProducts.Name = "btnProducts";
             btnProducts.Padding = new Padding(15, 5, 30, 5);
-            btnProducts.Size = new Size(189, 50);
-            btnProducts.TabIndex = 12;
-            btnProducts.Text = "Carts";
+            btnProducts.Size = new Size(188, 50);
+            btnProducts.TabIndex = 10;
+            btnProducts.Text = "Products";
             btnProducts.TextAlign = ContentAlignment.MiddleLeft;
-            btnProducts.TextColor = Color.White;
+            btnProducts.TextColor = Color.Black;
             btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += btnProducts_Click;
             // 
-            // btnMyPayments
+            // btnCarts
             // 
-            btnMyPayments.BackColor = SystemColors.Control;
-            btnMyPayments.BackgroundColor = SystemColors.Control;
-            btnMyPayments.BorderColor = Color.PaleVioletRed;
-            btnMyPayments.BorderRadius = 10;
-            btnMyPayments.BorderSize = 0;
-            btnMyPayments.FlatAppearance.BorderSize = 0;
-            btnMyPayments.FlatStyle = FlatStyle.Flat;
-            btnMyPayments.Font = new Font("Segoe UI Semibold", 12F);
-            btnMyPayments.ForeColor = Color.Black;
-            btnMyPayments.Location = new Point(7, 306);
-            btnMyPayments.Name = "btnMyPayments";
-            btnMyPayments.Padding = new Padding(15, 5, 30, 5);
-            btnMyPayments.Size = new Size(188, 50);
-            btnMyPayments.TabIndex = 15;
-            btnMyPayments.Text = "Payments";
-            btnMyPayments.TextAlign = ContentAlignment.MiddleLeft;
-            btnMyPayments.TextColor = Color.Black;
-            btnMyPayments.UseVisualStyleBackColor = false;
-            btnMyPayments.Click += btnMyPayments_Click;
-            // 
-            // btnCategories
-            // 
-            btnCategories.BackColor = SystemColors.Control;
-            btnCategories.BackgroundColor = SystemColors.Control;
-            btnCategories.BorderColor = Color.PaleVioletRed;
-            btnCategories.BorderRadius = 10;
-            btnCategories.BorderSize = 0;
-            btnCategories.FlatAppearance.BorderSize = 0;
-            btnCategories.FlatStyle = FlatStyle.Flat;
-            btnCategories.Font = new Font("Segoe UI Semibold", 12F);
-            btnCategories.ForeColor = Color.Black;
-            btnCategories.Location = new Point(7, 194);
-            btnCategories.Name = "btnCategories";
-            btnCategories.Padding = new Padding(15, 5, 30, 5);
-            btnCategories.Size = new Size(188, 50);
-            btnCategories.TabIndex = 13;
-            btnCategories.Text = "Categories";
-            btnCategories.TextAlign = ContentAlignment.MiddleLeft;
-            btnCategories.TextColor = Color.Black;
-            btnCategories.UseVisualStyleBackColor = false;
-            btnCategories.Click += btnCategories_Click;
+            btnCarts.BackColor = Color.FromArgb(64, 123, 255);
+            btnCarts.BackgroundColor = Color.FromArgb(64, 123, 255);
+            btnCarts.BorderColor = Color.PaleVioletRed;
+            btnCarts.BorderRadius = 10;
+            btnCarts.BorderSize = 0;
+            btnCarts.FlatAppearance.BorderSize = 0;
+            btnCarts.FlatStyle = FlatStyle.Flat;
+            btnCarts.Font = new Font("Segoe UI Semibold", 12F);
+            btnCarts.ForeColor = Color.White;
+            btnCarts.Location = new Point(11, 191);
+            btnCarts.Name = "btnCarts";
+            btnCarts.Padding = new Padding(15, 5, 30, 5);
+            btnCarts.Size = new Size(189, 50);
+            btnCarts.TabIndex = 9;
+            btnCarts.Text = "Carts";
+            btnCarts.TextAlign = ContentAlignment.MiddleLeft;
+            btnCarts.TextColor = Color.White;
+            btnCarts.UseVisualStyleBackColor = false;
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.bms;
-            pbLogo.Location = new Point(16, 6);
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
+            pbLogo.Location = new Point(20, 3);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(109, 109);
             pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbLogo.TabIndex = 11;
+            pbLogo.TabIndex = 8;
             pbLogo.TabStop = false;
             // 
             // panel5
@@ -306,7 +282,7 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Segoe UI", 14F);
-            lblWelcome.ForeColor = Color.FromArgb(255, 101, 0);
+            lblWelcome.ForeColor = Color.FromArgb(64, 123, 255);
             lblWelcome.Location = new Point(22, 19);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(78, 32);
@@ -376,8 +352,8 @@
             // 
             // btnBuyAll
             // 
-            btnBuyAll.BackColor = Color.FromArgb(255, 101, 0);
-            btnBuyAll.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnBuyAll.BackColor = Color.FromArgb(64, 123, 255);
+            btnBuyAll.BackgroundColor = Color.FromArgb(64, 123, 255);
             btnBuyAll.BorderColor = Color.PaleVioletRed;
             btnBuyAll.BorderRadius = 10;
             btnBuyAll.BorderSize = 0;
@@ -404,28 +380,6 @@
             label1.Size = new Size(344, 28);
             label1.TabIndex = 0;
             label1.Text = "Here is your procuts, you can buy now";
-            // 
-            // btnCustomers
-            // 
-            btnCustomers.BackColor = SystemColors.Control;
-            btnCustomers.BackgroundColor = SystemColors.Control;
-            btnCustomers.BorderColor = Color.PaleVioletRed;
-            btnCustomers.BorderRadius = 10;
-            btnCustomers.BorderSize = 0;
-            btnCustomers.FlatAppearance.BorderSize = 0;
-            btnCustomers.FlatStyle = FlatStyle.Flat;
-            btnCustomers.Font = new Font("Segoe UI Semibold", 12F);
-            btnCustomers.ForeColor = Color.Black;
-            btnCustomers.Location = new Point(8, 362);
-            btnCustomers.Name = "btnCustomers";
-            btnCustomers.Padding = new Padding(15, 5, 30, 5);
-            btnCustomers.Size = new Size(188, 50);
-            btnCustomers.TabIndex = 16;
-            btnCustomers.Text = "Customers";
-            btnCustomers.TextAlign = ContentAlignment.MiddleLeft;
-            btnCustomers.TextColor = Color.Black;
-            btnCustomers.UseVisualStyleBackColor = false;
-            btnCustomers.Click += btnCustomers_Click;
             // 
             // CartForm
             // 
@@ -458,11 +412,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel1;
-        private components.ButtonSidebar1 btnMyOrders;
-        private components.ButtonSidebar btnProducts;
-        private components.ButtonSidebar1 btnMyPayments;
-        private components.ButtonSidebar1 btnCategories;
-        private PictureBox pbLogo;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tableLayoutPanel4;
         private Panel panel3;
@@ -479,6 +428,9 @@
         private Panel panel6;
         private components.ButtonComponent1 btnBuyAll;
         private Label label1;
-        private components.ButtonSidebar1 btnCustomers;
+        private components.ButtonSidebar1 btnPay;
+        private components.ButtonSidebar1 btnProducts;
+        private components.ButtonSidebar btnCarts;
+        private PictureBox pbLogo;
     }
 }

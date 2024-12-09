@@ -162,5 +162,9 @@ namespace shop_management_system.Views
             this.Hide();
         }
 
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

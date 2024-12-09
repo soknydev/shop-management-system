@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
@@ -87,8 +88,8 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.FromArgb(255, 101, 0);
-            btnLogin.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnLogin.BackColor = Color.FromArgb(64, 123, 255);
+            btnLogin.BackgroundColor = Color.FromArgb(64, 123, 255);
             btnLogin.BorderColor = Color.PaleVioletRed;
             btnLogin.BorderRadius = 10;
             btnLogin.BorderSize = 0;
@@ -132,7 +133,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(185, 34);
             txtUsername.TabIndex = 3;
-            txtUsername.Text = "Admin";
+            txtUsername.Text = "makara";
             // 
             // label2
             // 
@@ -148,7 +149,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 101, 0);
+            label1.ForeColor = Color.FromArgb(64, 123, 255);
             label1.Location = new Point(869, 144);
             label1.Name = "label1";
             label1.Size = new Size(116, 50);
@@ -157,7 +158,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Tablet_login;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(65, 144);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(452, 432);

@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyPaymentForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
             logoutButton1 = new components.LogoutButton();
             panel2 = new Panel();
-            btnCarts = new components.ButtonSidebar1();
-            btnPyaments = new components.ButtonSidebar();
-            btnProducts = new components.ButtonSidebar1();
-            btnCategories = new components.ButtonSidebar1();
-            pbLogo = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             panelComponent11 = new components.PanelComponent1();
             flpInvoices = new FlowLayoutPanel();
@@ -48,18 +44,21 @@
             lblWelcome = new Label();
             btnSearch = new Button();
             txtSearch = new TextBox();
-            btnCustomer = new components.ButtonSidebar1();
+            btnPay = new components.ButtonSidebar1();
+            btnProducts = new components.ButtonSidebar1();
+            btnCarts = new components.ButtonSidebar();
+            pbLogo = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             panelComponent11.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -125,114 +124,15 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(btnCustomer);
-            panel2.Controls.Add(btnCarts);
-            panel2.Controls.Add(btnPyaments);
+            panel2.Controls.Add(btnPay);
             panel2.Controls.Add(btnProducts);
-            panel2.Controls.Add(btnCategories);
+            panel2.Controls.Add(btnCarts);
             panel2.Controls.Add(pbLogo);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(208, 658);
             panel2.TabIndex = 1;
-            // 
-            // btnCarts
-            // 
-            btnCarts.BackColor = SystemColors.Control;
-            btnCarts.BackgroundColor = SystemColors.Control;
-            btnCarts.BorderColor = Color.PaleVioletRed;
-            btnCarts.BorderRadius = 10;
-            btnCarts.BorderSize = 0;
-            btnCarts.FlatAppearance.BorderSize = 0;
-            btnCarts.FlatStyle = FlatStyle.Flat;
-            btnCarts.Font = new Font("Segoe UI Semibold", 12F);
-            btnCarts.ForeColor = Color.Black;
-            btnCarts.Location = new Point(9, 250);
-            btnCarts.Name = "btnCarts";
-            btnCarts.Padding = new Padding(15, 5, 30, 5);
-            btnCarts.Size = new Size(188, 50);
-            btnCarts.TabIndex = 11;
-            btnCarts.Text = "Carts";
-            btnCarts.TextAlign = ContentAlignment.MiddleLeft;
-            btnCarts.TextColor = Color.Black;
-            btnCarts.UseVisualStyleBackColor = false;
-            btnCarts.Click += btnCarts_Click;
-            // 
-            // btnPyaments
-            // 
-            btnPyaments.BackColor = Color.FromArgb(255, 101, 0);
-            btnPyaments.BackgroundColor = Color.FromArgb(255, 101, 0);
-            btnPyaments.BorderColor = Color.PaleVioletRed;
-            btnPyaments.BorderRadius = 10;
-            btnPyaments.BorderSize = 0;
-            btnPyaments.FlatAppearance.BorderSize = 0;
-            btnPyaments.FlatStyle = FlatStyle.Flat;
-            btnPyaments.Font = new Font("Segoe UI Semibold", 12F);
-            btnPyaments.ForeColor = Color.White;
-            btnPyaments.Location = new Point(9, 306);
-            btnPyaments.Name = "btnPyaments";
-            btnPyaments.Padding = new Padding(15, 5, 30, 5);
-            btnPyaments.Size = new Size(189, 50);
-            btnPyaments.TabIndex = 9;
-            btnPyaments.Text = "Payments";
-            btnPyaments.TextAlign = ContentAlignment.MiddleLeft;
-            btnPyaments.TextColor = Color.White;
-            btnPyaments.UseVisualStyleBackColor = false;
-            // 
-            // btnProducts
-            // 
-            btnProducts.BackColor = SystemColors.Control;
-            btnProducts.BackgroundColor = SystemColors.Control;
-            btnProducts.BorderColor = Color.PaleVioletRed;
-            btnProducts.BorderRadius = 10;
-            btnProducts.BorderSize = 0;
-            btnProducts.FlatAppearance.BorderSize = 0;
-            btnProducts.FlatStyle = FlatStyle.Flat;
-            btnProducts.Font = new Font("Segoe UI Semibold", 12F);
-            btnProducts.ForeColor = Color.Black;
-            btnProducts.Location = new Point(10, 138);
-            btnProducts.Name = "btnProducts";
-            btnProducts.Padding = new Padding(15, 5, 30, 5);
-            btnProducts.Size = new Size(188, 50);
-            btnProducts.TabIndex = 12;
-            btnProducts.Text = "Products";
-            btnProducts.TextAlign = ContentAlignment.MiddleLeft;
-            btnProducts.TextColor = Color.Black;
-            btnProducts.UseVisualStyleBackColor = false;
-            btnProducts.Click += btnProducts_Click;
-            // 
-            // btnCategories
-            // 
-            btnCategories.BackColor = SystemColors.Control;
-            btnCategories.BackgroundColor = SystemColors.Control;
-            btnCategories.BorderColor = Color.PaleVioletRed;
-            btnCategories.BorderRadius = 10;
-            btnCategories.BorderSize = 0;
-            btnCategories.FlatAppearance.BorderSize = 0;
-            btnCategories.FlatStyle = FlatStyle.Flat;
-            btnCategories.Font = new Font("Segoe UI Semibold", 12F);
-            btnCategories.ForeColor = Color.Black;
-            btnCategories.Location = new Point(10, 194);
-            btnCategories.Name = "btnCategories";
-            btnCategories.Padding = new Padding(15, 5, 30, 5);
-            btnCategories.Size = new Size(188, 50);
-            btnCategories.TabIndex = 10;
-            btnCategories.Text = "Categories";
-            btnCategories.TextAlign = ContentAlignment.MiddleLeft;
-            btnCategories.TextColor = Color.Black;
-            btnCategories.UseVisualStyleBackColor = false;
-            btnCategories.Click += btnCategories_Click;
-            // 
-            // pbLogo
-            // 
-            pbLogo.Image = Properties.Resources.bms;
-            pbLogo.Location = new Point(19, 6);
-            pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(109, 109);
-            pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbLogo.TabIndex = 8;
-            pbLogo.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -320,7 +220,7 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Segoe UI", 14F);
-            lblWelcome.ForeColor = Color.FromArgb(255, 101, 0);
+            lblWelcome.ForeColor = Color.FromArgb(64, 123, 255);
             lblWelcome.Location = new Point(24, 19);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(78, 32);
@@ -345,26 +245,80 @@
             txtSearch.Size = new Size(321, 39);
             txtSearch.TabIndex = 0;
             // 
-            // btnCustomer
+            // btnPay
             // 
-            btnCustomer.BackColor = SystemColors.Control;
-            btnCustomer.BackgroundColor = SystemColors.Control;
-            btnCustomer.BorderColor = Color.PaleVioletRed;
-            btnCustomer.BorderRadius = 10;
-            btnCustomer.BorderSize = 0;
-            btnCustomer.FlatAppearance.BorderSize = 0;
-            btnCustomer.FlatStyle = FlatStyle.Flat;
-            btnCustomer.Font = new Font("Segoe UI Semibold", 12F);
-            btnCustomer.ForeColor = Color.Black;
-            btnCustomer.Location = new Point(9, 362);
-            btnCustomer.Name = "btnCustomer";
-            btnCustomer.Padding = new Padding(15, 5, 30, 5);
-            btnCustomer.Size = new Size(188, 50);
-            btnCustomer.TabIndex = 13;
-            btnCustomer.Text = "Customers";
-            btnCustomer.TextAlign = ContentAlignment.MiddleLeft;
-            btnCustomer.TextColor = Color.Black;
-            btnCustomer.UseVisualStyleBackColor = false;
+            btnPay.BackColor = SystemColors.Control;
+            btnPay.BackgroundColor = SystemColors.Control;
+            btnPay.BorderColor = Color.PaleVioletRed;
+            btnPay.BorderRadius = 10;
+            btnPay.BorderSize = 0;
+            btnPay.FlatAppearance.BorderSize = 0;
+            btnPay.FlatStyle = FlatStyle.Flat;
+            btnPay.Font = new Font("Segoe UI Semibold", 12F);
+            btnPay.ForeColor = Color.Black;
+            btnPay.Location = new Point(10, 191);
+            btnPay.Name = "btnPay";
+            btnPay.Padding = new Padding(15, 5, 30, 5);
+            btnPay.Size = new Size(188, 50);
+            btnPay.TabIndex = 15;
+            btnPay.Text = "Carts";
+            btnPay.TextAlign = ContentAlignment.MiddleLeft;
+            btnPay.TextColor = Color.Black;
+            btnPay.UseVisualStyleBackColor = false;
+            btnPay.Click += btnCarts_Click;
+            // 
+            // btnProducts
+            // 
+            btnProducts.BackColor = SystemColors.Control;
+            btnProducts.BackgroundColor = SystemColors.Control;
+            btnProducts.BorderColor = Color.PaleVioletRed;
+            btnProducts.BorderRadius = 10;
+            btnProducts.BorderSize = 0;
+            btnProducts.FlatAppearance.BorderSize = 0;
+            btnProducts.FlatStyle = FlatStyle.Flat;
+            btnProducts.Font = new Font("Segoe UI Semibold", 12F);
+            btnProducts.ForeColor = Color.Black;
+            btnProducts.Location = new Point(10, 135);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Padding = new Padding(15, 5, 30, 5);
+            btnProducts.Size = new Size(188, 50);
+            btnProducts.TabIndex = 14;
+            btnProducts.Text = "Products";
+            btnProducts.TextAlign = ContentAlignment.MiddleLeft;
+            btnProducts.TextColor = Color.Black;
+            btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += btnProducts_Click;
+            // 
+            // btnCarts
+            // 
+            btnCarts.BackColor = Color.FromArgb(64, 123, 255);
+            btnCarts.BackgroundColor = Color.FromArgb(64, 123, 255);
+            btnCarts.BorderColor = Color.PaleVioletRed;
+            btnCarts.BorderRadius = 10;
+            btnCarts.BorderSize = 0;
+            btnCarts.FlatAppearance.BorderSize = 0;
+            btnCarts.FlatStyle = FlatStyle.Flat;
+            btnCarts.Font = new Font("Segoe UI Semibold", 12F);
+            btnCarts.ForeColor = Color.White;
+            btnCarts.Location = new Point(16, 247);
+            btnCarts.Name = "btnCarts";
+            btnCarts.Padding = new Padding(15, 5, 30, 5);
+            btnCarts.Size = new Size(189, 50);
+            btnCarts.TabIndex = 13;
+            btnCarts.Text = "Payments";
+            btnCarts.TextAlign = ContentAlignment.MiddleLeft;
+            btnCarts.TextColor = Color.White;
+            btnCarts.UseVisualStyleBackColor = false;
+            // 
+            // pbLogo
+            // 
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
+            pbLogo.Location = new Point(18, 3);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(109, 109);
+            pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pbLogo.TabIndex = 12;
+            pbLogo.TabStop = false;
             // 
             // MyPaymentForm
             // 
@@ -378,7 +332,6 @@
             tableLayoutPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             panelComponent11.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
@@ -386,6 +339,7 @@
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -396,11 +350,6 @@
         private Panel panel1;
         private components.LogoutButton logoutButton1;
         private Panel panel2;
-        private components.ButtonSidebar1 btnCarts;
-        private components.ButtonSidebar btnPyaments;
-        private components.ButtonSidebar1 btnProducts;
-        private components.ButtonSidebar1 btnCategories;
-        private PictureBox pbLogo;
         private TableLayoutPanel tableLayoutPanel3;
         private components.PanelComponent1 panelComponent11;
         private FlowLayoutPanel flpInvoices;
@@ -411,6 +360,9 @@
         private TextBox txtSearch;
         private Panel panel3;
         private components.PictureBoxComponent1 pbProfile;
-        private components.ButtonSidebar1 btnCustomer;
+        private components.ButtonSidebar1 btnPay;
+        private components.ButtonSidebar1 btnProducts;
+        private components.ButtonSidebar btnCarts;
+        private PictureBox pbLogo;
     }
 }

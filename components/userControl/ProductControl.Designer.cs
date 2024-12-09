@@ -40,7 +40,7 @@
             lblProductName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblProductName.AutoSize = true;
             lblProductName.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
-            lblProductName.ForeColor = Color.FromArgb(255, 101, 0);
+            lblProductName.ForeColor = Color.FromArgb(64, 123, 255);
             lblProductName.Location = new Point(52, 21);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(86, 37);
@@ -71,8 +71,8 @@
             // 
             // btnAddToCart
             // 
-            btnAddToCart.BackColor = Color.FromArgb(255, 101, 0);
-            btnAddToCart.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnAddToCart.BackColor = Color.FromArgb(64, 123, 255);
+            btnAddToCart.BackgroundColor = Color.FromArgb(64, 123, 255);
             btnAddToCart.BorderColor = Color.PaleVioletRed;
             btnAddToCart.BorderRadius = 10;
             btnAddToCart.BorderSize = 0;

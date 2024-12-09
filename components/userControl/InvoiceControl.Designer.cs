@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceControl));
             pbLogo = new PictureBox();
             label1 = new Label();
             lblInvoiceId = new Label();
@@ -43,7 +44,7 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.bms;
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
             pbLogo.Location = new Point(32, 16);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(50, 49);
@@ -55,7 +56,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 101, 0);
+            label1.ForeColor = Color.FromArgb(64, 123, 255);
             label1.Location = new Point(151, 16);
             label1.Name = "label1";
             label1.Size = new Size(104, 31);
@@ -138,7 +139,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.ForeColor = Color.FromArgb(255, 101, 0);
+            lblTotal.ForeColor = Color.FromArgb(64, 123, 255);
             lblTotal.Location = new Point(128, 509);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(55, 28);

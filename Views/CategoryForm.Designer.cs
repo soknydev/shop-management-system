@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
@@ -122,6 +123,7 @@
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.TextColor = Color.White;
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCategories_Click;
             // 
             // btnProducts
             // 
@@ -147,7 +149,7 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.bms;
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
             pbLogo.Location = new Point(19, 3);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(109, 109);

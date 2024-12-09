@@ -173,12 +173,25 @@ namespace shop_management_system.Views
             }
         }
 
-        private void btnCustomers_Click(object sender, EventArgs e)
+
+
+        private void btnProducts_Click(object sender, EventArgs e)
         {
-            CustomerForm customerForm = new CustomerForm();
-            customerForm.Show();
+            DashboardForm dashboard = new DashboardForm();
+            dashboard.Show();
             this.Hide();
         }
 
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            MyPaymentForm myPaymentForm = new MyPaymentForm();
+            myPaymentForm.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
