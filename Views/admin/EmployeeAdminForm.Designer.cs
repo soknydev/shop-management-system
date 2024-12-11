@@ -390,6 +390,7 @@
             btnPayments.TextAlign = ContentAlignment.MiddleLeft;
             btnPayments.TextColor = Color.Black;
             btnPayments.UseVisualStyleBackColor = false;
+            btnPayments.Click += btnMyPayments_Click;
             // 
             // btnUsers
             // 
@@ -432,6 +433,7 @@
             btnProducts.TextAlign = ContentAlignment.MiddleLeft;
             btnProducts.TextColor = Color.Black;
             btnProducts.UseVisualStyleBackColor = false;
+            btnProducts.Click += btnProducts_Click;
             // 
             // pbLogo
             // 

@@ -1,6 +1,6 @@
-﻿namespace shop_management_system.Views
+﻿namespace shop_management_system.Views.admin
 {
-    partial class RegisterForm
+    partial class UpdateEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateEmployeeForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            btnClose = new components.ButtonComponent2();
-            btnRegister = new components.ButtonComponent1();
+            cmbRole = new ComboBox();
+            label10 = new Label();
             txtSalary = new TextBox();
-            txtGmail = new TextBox();
-            dtpTimePicker = new DateTimePicker();
-            pictureBox = new PictureBox();
+            txtEmail = new TextBox();
+            dtpHireDate = new DateTimePicker();
+            pbEmployee = new PictureBox();
             btnUpload = new Button();
             label9 = new Label();
             label8 = new Label();
@@ -48,13 +48,15 @@
             label4 = new Label();
             txtUsername = new TextBox();
             label3 = new Label();
-            txtFullname = new TextBox();
+            txtName = new TextBox();
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            btnSave = new components.ButtonComponent1();
+            btnClose = new components.ButtonComponent1();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbEmployee).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -73,18 +75,20 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 800F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1528, 833);
-            tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.Size = new Size(1479, 917);
+            tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(btnClose);
-            panel1.Controls.Add(btnRegister);
+            panel1.Controls.Add(btnSave);
+            panel1.Controls.Add(cmbRole);
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(txtSalary);
-            panel1.Controls.Add(txtGmail);
-            panel1.Controls.Add(dtpTimePicker);
-            panel1.Controls.Add(pictureBox);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(dtpHireDate);
+            panel1.Controls.Add(pbEmployee);
             panel1.Controls.Add(btnUpload);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -96,57 +100,34 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(txtUsername);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(txtFullname);
+            panel1.Controls.Add(txtName);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(17, 19);
+            panel1.Location = new Point(-7, 61);
             panel1.Name = "panel1";
             panel1.Size = new Size(1494, 794);
             panel1.TabIndex = 0;
             // 
-            // btnClose
+            // cmbRole
             // 
-            btnClose.BackColor = Color.Red;
-            btnClose.BackgroundColor = Color.Red;
-            btnClose.BorderColor = Color.PaleVioletRed;
-            btnClose.BorderRadius = 8;
-            btnClose.BorderSize = 0;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI Semibold", 12F);
-            btnClose.ForeColor = Color.White;
-            btnClose.Location = new Point(763, 656);
-            btnClose.Name = "btnClose";
-            btnClose.Padding = new Padding(15, 8, 15, 8);
-            btnClose.Size = new Size(127, 54);
-            btnClose.TabIndex = 27;
-            btnClose.Text = "Close";
-            btnClose.TextColor = Color.White;
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
+            cmbRole.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(1233, 339);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(178, 36);
+            cmbRole.TabIndex = 48;
             // 
-            // btnRegister
+            // label10
             // 
-            btnRegister.BackColor = Color.FromArgb(64, 123, 255);
-            btnRegister.BackgroundColor = Color.FromArgb(64, 123, 255);
-            btnRegister.BorderColor = Color.PaleVioletRed;
-            btnRegister.BorderRadius = 10;
-            btnRegister.BorderSize = 0;
-            btnRegister.FlatAppearance.BorderSize = 0;
-            btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Segoe UI Semibold", 12F);
-            btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(941, 658);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Padding = new Padding(15, 8, 15, 8);
-            btnRegister.Size = new Size(134, 50);
-            btnRegister.TabIndex = 26;
-            btnRegister.Text = "Add";
-            btnRegister.TextColor = Color.White;
-            btnRegister.UseVisualStyleBackColor = false;
-            btnRegister.Click += btnRegister_Click;
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(1064, 336);
+            label10.Name = "label10";
+            label10.Size = new Size(54, 28);
+            label10.TabIndex = 28;
+            label10.Text = "Role:";
             // 
             // txtSalary
             // 
@@ -156,42 +137,42 @@
             txtSalary.Size = new Size(178, 34);
             txtSalary.TabIndex = 25;
             // 
-            // txtGmail
+            // txtEmail
             // 
-            txtGmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtGmail.Location = new Point(1233, 159);
-            txtGmail.Name = "txtGmail";
-            txtGmail.Size = new Size(178, 34);
-            txtGmail.TabIndex = 24;
+            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(1233, 159);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(178, 34);
+            txtEmail.TabIndex = 24;
             // 
-            // dtpTimePicker
+            // dtpHireDate
             // 
-            dtpTimePicker.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpTimePicker.Location = new Point(782, 527);
-            dtpTimePicker.Name = "dtpTimePicker";
-            dtpTimePicker.Size = new Size(324, 34);
-            dtpTimePicker.TabIndex = 23;
+            dtpHireDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpHireDate.Location = new Point(782, 527);
+            dtpHireDate.Name = "dtpHireDate";
+            dtpHireDate.Size = new Size(324, 34);
+            dtpHireDate.TabIndex = 23;
             // 
-            // pictureBox
+            // pbEmployee
             // 
-            pictureBox.Image = (Image)resources.GetObject("pictureBox.Image");
-            pictureBox.Location = new Point(1233, 419);
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(178, 180);
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.TabIndex = 19;
-            pictureBox.TabStop = false;
+            pbEmployee.Image = (Image)resources.GetObject("pbEmployee.Image");
+            pbEmployee.Location = new Point(1233, 509);
+            pbEmployee.Name = "pbEmployee";
+            pbEmployee.Size = new Size(178, 180);
+            pbEmployee.SizeMode = PictureBoxSizeMode.Zoom;
+            pbEmployee.TabIndex = 19;
+            pbEmployee.TabStop = false;
             // 
             // btnUpload
             // 
             btnUpload.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpload.Location = new Point(1233, 339);
+            btnUpload.Location = new Point(1233, 429);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(178, 46);
             btnUpload.TabIndex = 18;
             btnUpload.Text = "Upload";
             btnUpload.UseVisualStyleBackColor = true;
-            btnUpload.Click += btnUpload_Click;
+            btnUpload.Click += btnUploadImage_Click;
             // 
             // label9
             // 
@@ -207,7 +188,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(1064, 339);
+            label8.Location = new Point(1064, 429);
             label8.Name = "label8";
             label8.Size = new Size(72, 28);
             label8.TabIndex = 14;
@@ -287,13 +268,13 @@
             label3.TabIndex = 4;
             label3.Text = "Username:";
             // 
-            // txtFullname
+            // txtName
             // 
-            txtFullname.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFullname.Location = new Point(782, 162);
-            txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(178, 34);
-            txtFullname.TabIndex = 3;
+            txtName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtName.Location = new Point(782, 162);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(178, 34);
+            txtName.TabIndex = 3;
             // 
             // label2
             // 
@@ -309,16 +290,16 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(64, 123, 255);
+            label1.ForeColor = SystemColors.MenuHighlight;
             label1.Location = new Point(613, 42);
             label1.Name = "label1";
-            label1.Size = new Size(392, 50);
+            label1.Size = new Size(319, 50);
             label1.TabIndex = 1;
-            label1.Text = "Create New Employee";
+            label1.Text = "Update Employee";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Mobile_login;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(22, 162);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(442, 445);
@@ -326,18 +307,60 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // RegisterForm
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(64, 123, 255);
+            btnSave.BackgroundColor = Color.FromArgb(64, 123, 255);
+            btnSave.BorderColor = Color.PaleVioletRed;
+            btnSave.BorderRadius = 10;
+            btnSave.BorderSize = 0;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI Semibold", 12F);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(961, 717);
+            btnSave.Name = "btnSave";
+            btnSave.Padding = new Padding(15, 8, 15, 8);
+            btnSave.Size = new Size(122, 50);
+            btnSave.TabIndex = 49;
+            btnSave.Text = "Save";
+            btnSave.TextColor = Color.White;
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Gray;
+            btnClose.BackgroundColor = Color.Gray;
+            btnClose.BorderColor = Color.PaleVioletRed;
+            btnClose.BorderRadius = 10;
+            btnClose.BorderSize = 0;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI Semibold", 12F);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(798, 717);
+            btnClose.Name = "btnClose";
+            btnClose.Padding = new Padding(15, 8, 15, 8);
+            btnClose.Size = new Size(122, 50);
+            btnClose.TabIndex = 50;
+            btnClose.Text = "Close";
+            btnClose.TextColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // UpdateEmployeeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1528, 833);
+            ClientSize = new Size(1479, 917);
             Controls.Add(tableLayoutPanel1);
-            Name = "RegisterForm";
-            Text = "RegisterForm";
+            Name = "UpdateEmployeeForm";
+            Text = "UpdateEmployeeForm";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbEmployee).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -346,29 +369,28 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private PictureBox pictureBox1;
-        private Label label2;
-        private Label label1;
-        private TextBox txtUsername;
-        private Label label3;
-        private TextBox txtFullname;
-        private TextBox textBox8;
+        private ComboBox cmbRole;
+        private Label label10;
+        private TextBox txtSalary;
+        private TextBox txtEmail;
+        private DateTimePicker dtpHireDate;
+        private PictureBox pbEmployee;
+        private Button btnUpload;
         private Label label9;
         private Label label8;
-        private TextBox textBox6;
         private Label label7;
-        private TextBox textBox5;
         private Label label6;
         private TextBox txtPhone;
         private Label label5;
         private TextBox txtPassword;
         private Label label4;
-        private PictureBox pictureBox;
-        private Button btnUpload;
-        private DateTimePicker dtpTimePicker;
-        private TextBox txtSalary;
-        private TextBox txtGmail;
-        private components.ButtonComponent1 btnRegister;
-        private components.ButtonComponent2 btnClose;
+        private TextBox txtUsername;
+        private Label label3;
+        private TextBox txtName;
+        private Label label2;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private components.ButtonComponent1 btnClose;
+        private components.ButtonComponent1 btnSave;
     }
 }

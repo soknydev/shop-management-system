@@ -34,7 +34,11 @@
             lblEmail = new Label();
             lblPhone = new Label();
             pbEmployee = new PictureBox();
+            btnUpdate = new PictureBox();
+            btnDelete = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbEmployee).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnUpdate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnDelete).BeginInit();
             SuspendLayout();
             // 
             // lblName
@@ -87,10 +91,34 @@
             pbEmployee.TabIndex = 4;
             pbEmployee.TabStop = false;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.Image = (Image)resources.GetObject("btnUpdate.Image");
+            btnUpdate.Location = new Point(1271, 17);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(49, 37);
+            btnUpdate.SizeMode = PictureBoxSizeMode.Zoom;
+            btnUpdate.TabIndex = 7;
+            btnUpdate.TabStop = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.Location = new Point(1354, 17);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(49, 37);
+            btnDelete.SizeMode = PictureBoxSizeMode.Zoom;
+            btnDelete.TabIndex = 8;
+            btnDelete.TabStop = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // CartEmployeeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
             Controls.Add(pbEmployee);
             Controls.Add(lblPhone);
             Controls.Add(lblEmail);
@@ -99,6 +127,8 @@
             Name = "CartEmployeeControl";
             Size = new Size(1765, 64);
             ((System.ComponentModel.ISupportInitialize)pbEmployee).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnUpdate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -110,5 +140,7 @@
         private Label lblEmail;
         private Label lblPhone;
         private PictureBox pbEmployee;
+        private PictureBox btnUpdate;
+        private PictureBox btnDelete;
     }
 }
