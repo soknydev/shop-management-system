@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateEmployeeForm));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            btnClose = new components.ButtonComponent1();
+            btnSave = new components.ButtonComponent1();
             cmbRole = new ComboBox();
             label10 = new Label();
             txtSalary = new TextBox();
@@ -52,8 +54,6 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            btnSave = new components.ButtonComponent1();
-            btnClose = new components.ButtonComponent1();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbEmployee).BeginInit();
@@ -109,6 +109,48 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1494, 794);
             panel1.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.Gray;
+            btnClose.BackgroundColor = Color.Gray;
+            btnClose.BorderColor = Color.PaleVioletRed;
+            btnClose.BorderRadius = 10;
+            btnClose.BorderSize = 0;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI Semibold", 12F);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(798, 717);
+            btnClose.Name = "btnClose";
+            btnClose.Padding = new Padding(15, 8, 15, 8);
+            btnClose.Size = new Size(122, 50);
+            btnClose.TabIndex = 50;
+            btnClose.Text = "Close";
+            btnClose.TextColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(64, 123, 255);
+            btnSave.BackgroundColor = Color.FromArgb(64, 123, 255);
+            btnSave.BorderColor = Color.PaleVioletRed;
+            btnSave.BorderRadius = 10;
+            btnSave.BorderSize = 0;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI Semibold", 12F);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(961, 717);
+            btnSave.Name = "btnSave";
+            btnSave.Padding = new Padding(15, 8, 15, 8);
+            btnSave.Size = new Size(122, 50);
+            btnSave.TabIndex = 49;
+            btnSave.Text = "Save";
+            btnSave.TextColor = Color.White;
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // cmbRole
             // 
@@ -293,9 +335,9 @@
             label1.ForeColor = SystemColors.MenuHighlight;
             label1.Location = new Point(613, 42);
             label1.Name = "label1";
-            label1.Size = new Size(319, 50);
+            label1.Size = new Size(230, 50);
             label1.TabIndex = 1;
-            label1.Text = "Update Employee";
+            label1.Text = "Update User";
             // 
             // pictureBox1
             // 
@@ -306,48 +348,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // btnSave
-            // 
-            btnSave.BackColor = Color.FromArgb(64, 123, 255);
-            btnSave.BackgroundColor = Color.FromArgb(64, 123, 255);
-            btnSave.BorderColor = Color.PaleVioletRed;
-            btnSave.BorderRadius = 10;
-            btnSave.BorderSize = 0;
-            btnSave.FlatAppearance.BorderSize = 0;
-            btnSave.FlatStyle = FlatStyle.Flat;
-            btnSave.Font = new Font("Segoe UI Semibold", 12F);
-            btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(961, 717);
-            btnSave.Name = "btnSave";
-            btnSave.Padding = new Padding(15, 8, 15, 8);
-            btnSave.Size = new Size(122, 50);
-            btnSave.TabIndex = 49;
-            btnSave.Text = "Save";
-            btnSave.TextColor = Color.White;
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
-            // 
-            // btnClose
-            // 
-            btnClose.BackColor = Color.Gray;
-            btnClose.BackgroundColor = Color.Gray;
-            btnClose.BorderColor = Color.PaleVioletRed;
-            btnClose.BorderRadius = 10;
-            btnClose.BorderSize = 0;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI Semibold", 12F);
-            btnClose.ForeColor = Color.White;
-            btnClose.Location = new Point(798, 717);
-            btnClose.Name = "btnClose";
-            btnClose.Padding = new Padding(15, 8, 15, 8);
-            btnClose.Size = new Size(122, 50);
-            btnClose.TabIndex = 50;
-            btnClose.Text = "Close";
-            btnClose.TextColor = Color.White;
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
             // 
             // UpdateEmployeeForm
             // 

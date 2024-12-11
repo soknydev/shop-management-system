@@ -312,9 +312,9 @@
             label1.ForeColor = Color.FromArgb(64, 123, 255);
             label1.Location = new Point(613, 42);
             label1.Name = "label1";
-            label1.Size = new Size(392, 50);
+            label1.Size = new Size(303, 50);
             label1.TabIndex = 1;
-            label1.Text = "Create New Employee";
+            label1.Text = "Create New User";
             // 
             // pictureBox1
             // 

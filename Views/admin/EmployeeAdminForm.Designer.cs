@@ -254,7 +254,7 @@
             btnAddEmployee.Padding = new Padding(15, 8, 15, 8);
             btnAddEmployee.Size = new Size(185, 50);
             btnAddEmployee.TabIndex = 0;
-            btnAddEmployee.Text = "Add Employee";
+            btnAddEmployee.Text = "Add User";
             btnAddEmployee.TextColor = Color.White;
             btnAddEmployee.UseVisualStyleBackColor = false;
             btnAddEmployee.Click += btnAddEmployee_Click;
